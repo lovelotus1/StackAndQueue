@@ -14,6 +14,8 @@ namespace StackAndQueue
             stack.Add(56);
             Console.WriteLine("\nPushed 56 on top of the stack");
             stack.Display();
+            Console.WriteLine("\nPeek and Pop Still Stack Is Empty Operation Is Done");
+            stack.IsEmpty();
             Console.ReadLine();
         }
     }
