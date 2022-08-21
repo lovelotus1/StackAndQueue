@@ -65,4 +65,40 @@ namespace StackAndQueue
             }
         }
     }
+    public class LinkedListQueue
+    {
+        internal Node front;
+        internal void Display()
+        {
+            Node temp = this.front;
+            if (temp == null)
+            {
+                Console.WriteLine("Stack is Empty");
+            }
+            while (temp != null)
+            {
+                Console.WriteLine("\n" + temp.data);
+                temp = temp.next;
+            }
+        }
+
+        internal void EnQueue(int data)
+        {
+            Node node = new Node(data);
+            if (this.front == null)
+            {
+                this.front = node;
+            }
+            else
+            {
+                Node temp = front;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+            Console.WriteLine("{0} is added into queue ", node.data);
+        }
+    }
 }
