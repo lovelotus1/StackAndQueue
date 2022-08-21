@@ -100,5 +100,14 @@ namespace StackAndQueue
             }
             Console.WriteLine("{0} is added into queue ", node.data);
         }
+        internal void DeQueue()
+        {
+            if (this.front == null)
+            {
+                Console.WriteLine("Deletion is not possible");
+            }
+            Console.WriteLine("Deleted node from queue: " + this.front.data);
+            this.front = this.front.next;
+        }
     }
 }
